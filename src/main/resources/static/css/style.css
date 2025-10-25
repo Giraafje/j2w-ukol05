@@ -26,3 +26,27 @@ main {
     border-radius: 1rem;
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    max-width: 60rem;
+    min-width: 40rem;
+    padding: 20px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background-color: aliceblue;
+    box-shadow: 0 0 10px darkgray;
+}
+
+input, select {
+    height: 2.5em;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(222, 226, 230);
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
