@@ -16,8 +16,8 @@ public class RegistrationForm {
   @Past
   private LocalDate dateOfBirth;
 
-  @NotBlank
-  private String gender;
+  @NotNull
+  private Gender gender;
 
   @NotBlank
   private String session;
@@ -51,11 +51,11 @@ public class RegistrationForm {
     this.dateOfBirth = dateOfBirth;
   }
 
-  public String getGender() {
+  public Gender getGender() {
     return gender;
   }
 
-  public void setGender(String gender) {
+  public void setGender(Gender gender) {
     this.gender = gender;
   }
 

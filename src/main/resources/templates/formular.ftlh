@@ -18,35 +18,36 @@
         <form class="registration">
             <div class="col-md-12 mb-3">
                 <label class="form-label" for="firstName">Jméno:</label>
-                [@spring.formInput path="form.firstName"/]
+                [@spring.formInput path="form.firstName" attributes='class="form-control"'/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
             <div class="col-md-12 mb-3">
                 <label class="form-label" for="lastName">Příjmení:</label>
-                [@spring.formInput path="form.lastName"/]
+                [@spring.formInput path="form.lastName" attributes='class="form-control"'/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
             <div class="col-md-12 mb-3">
                 <label for="dateOfBirth" class="form-label">Datum narození:</label>
-                [@spring.formInput path="form.dateOfBirth" fieldType="date" /]
+                [@spring.formInput path="form.dateOfBirth" fieldType="date" attributes='class="form-control"'/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
             <div class="col-md-12 mb-3">
                 <label for="gender" class="form-label">Pohlaví:</label>
-                [@spring.formSingleSelect path="form.gender" options={
+                [@spring.formSingleSelect path="form.gender" attributes='class="form-control"' options={
                     "": "",
-                    "boy": "Chlapec",
-                    "girl": "Dívka"
+                    "BOY": "Chlapec",
+                    "GIRL": "Dívka"
                 }/]
+                [@spring.bind "form.gender"/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
             <div class="col-md-12 mb-3">
-                <label for="session" class="formRow">Turnus:</label>
-                [@spring.formSingleSelect path="form.session" options={
+                <label for="session" class="form-label">Turnus:</label>
+                [@spring.formSingleSelect path="form.session" attributes='class="form-control"' options={
                     "": "",
                     "session-1": "4. - 11. července 2026",
                     "session-2": "11. - 18. července 2026",
@@ -59,14 +60,14 @@
             </div>
 
             <div class="col-md-12 mb-3">
-                <label for="email" class="formRow">E-mail:</label>
-                [@spring.formInput path="form.email" fieldType="email" /]
+                <label for="email" class="form-label">E-mail:</label>
+                [@spring.formInput path="form.email" fieldType="email" attributes='class="form-control"'/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
             <div>
-                <label for="phoneNumber" class="formRow">Telefon:</label>
-                [@spring.formInput path="form.phoneNumber" fieldType="tel" /]
+                <label for="phoneNumber" class="form-label">Telefon:</label>
+                [@spring.formInput path="form.phoneNumber" fieldType="tel" attributes='class="form-control"'/]
                 <div class="error">[@spring.showErrors "<br>"/]</div>
             </div>
 
