@@ -15,7 +15,7 @@
 <body>
     <main>
         <h1>Registrace na letní dětský tábor</h1>
-        <form class="registration">
+        <form class="registration" action="/" method="post">
             <div class="col-md-12 mb-3">
                 <label class="form-label" for="firstName">Jméno:</label>
                 [@spring.formInput path="form.firstName" attributes='class="form-control"'/]
