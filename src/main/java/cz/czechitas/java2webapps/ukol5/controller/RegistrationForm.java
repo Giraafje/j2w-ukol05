@@ -85,7 +85,7 @@ public class RegistrationForm {
 
   public Integer getAge() {
     if (dateOfBirth == null) {
-      return 0; //If I returned null, the page is failing because an Integer is expected
+      return null;
     }
 
     Period period = dateOfBirth.until(LocalDate.now());

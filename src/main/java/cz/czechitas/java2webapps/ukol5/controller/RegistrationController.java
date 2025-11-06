@@ -25,7 +25,7 @@ public class RegistrationController {
 
   @PostMapping("")
   public Object form(@Valid @ModelAttribute("form") RegistrationForm form, BindingResult bindingResult) {
-    if (form.getAge() < 9 || form.getAge() > 15) {
+    if (form.getAge() != null && (form.getAge() < 9 || form.getAge() > 15)) {
       bindingResult.rejectValue("dateOfBirth", "error.dateOfBirth", "Věk musí být mezi 9 a 15 lety.");
     }
 
